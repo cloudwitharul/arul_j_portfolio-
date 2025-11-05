@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Arul Pandi — Cloud Support & Healthcare RCM</title>
+  <meta name="description" content="ArulPandi Arumugam —  Senior process Executive |AWS Cloud Support | Healthcare RCM Specialist. Portfolio: projects, experience, and contact." />
+  <style>
+    :root{
+      --bg:#031835;
+      --panel:#062544;
+      --accent:#00d0c4;
+      --muted:#98b0c9;
+      --highlight:#00ff99;
+      --contact-bg:#0b2c5a;
+      --progress-bg:#0a1f3c;
+      --progress-fill:#00d0c4;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#04224a);color:#eaf3ff;line-height:1.45;overflow-x:hidden}
+    .wrap{max-width:1100px;margin:32px auto;padding:28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;opacity:0;animation:fadeIn 1.2s ease forwards;animation-delay:0.3s}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#0088ff);display:flex;align-items:center;justify-content:center;font-weight:700;color:#032;box-shadow:0 6px 18px rgba(0,0,0,0.5)}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600;opacity:0;animation:slideIn 1s ease forwards}
+    nav a:nth-child(1){animation-delay:1.2s}
+    nav a:nth-child(2){animation-delay:1.4s}
+    nav a:nth-child(3){animation-delay:1.6s}
+    nav a:nth-child(4){animation-delay:1.8s}
+    nav a.cta{background:var(--accent);color:#012029;padding:10px 14px;border-radius:12px}
+
+    @keyframes fadeIn { to{opacity:1;transform:none} }
+    @keyframes slideIn { from{transform:translateY(20px);opacity:0} to{transform:translateY(0);opacity:1} }
+    @keyframes marquee { 0%{transform:translateX(100%);} 100%{transform:translateX(-100%);} }
+
+    .hero{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:28px;border-radius:18px}
+    .hero-left{position:relative;height:420px;border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(0,0,0,0.25))}
+    .profile-pic{width:260px;height:260px;border-radius:50%;object-fit:cover;border:4px solid var(--accent);box-shadow:0 6px 20px rgba(0,0,0,0.6)}
+    .hero-right{padding:8px}
+    .name{font-size:44px;line-height:1.02;font-weight:800;margin:0 0 6px;opacity:0;animation:slideIn 1.2s ease forwards;animation-delay:0.6s}
+    .title-marquee{overflow:hidden;white-space:nowrap;color:var(--highlight);font-weight:900;font-size:18px;margin-bottom:16px;animation:fadeIn 1.2s ease forwards;animation-delay:0.9s}
+    .title-marquee span{display:inline-block;animation:marquee 8s linear infinite}
+    .summary{color:var(--muted);max-width:520px;animation:slideIn 1s ease forwards;animation-delay:1.1s;opacity:0}
+    .cta-row{display:flex;gap:14px;margin-top:20px;align-items:center;flex-wrap:wrap}
+    .btn{background:var(--accent);color:#012029;padding:12px 18px;border-radius:999px;font-weight:700;text-decoration:none;transition:all .3s}
+    .btn:hover{opacity:.85;transform:translateY(-1px)}
+    .btn.outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    h2{margin:40px 0 12px;font-size:20px;opacity:0;animation:slideIn 0.8s ease forwards}
+    .card{background:var(--panel);padding:14px;border-radius:10px}
+    .progress-bar{background:var(--progress-bg);border-radius:12px;overflow:hidden;height:10px;margin-top:4px}
+    .progress-fill{background:var(--progress-fill);height:10px;width:0;border-radius:12px;animation:fillWidth 2s ease forwards}
+    @keyframes fillWidth { to{width:var(--w)} }
+
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .muted{color:var(--muted);font-size:14px}
+
+    .project{display:flex;gap:12px;align-items:flex-start}
+    .project img{width:120px;height:80px;border-radius:8px;object-fit:cover}
+    .project .meta{flex:1}
+
+    .contact{display:flex;gap:18px;flex-wrap:wrap;background:var(--contact-bg);padding:20px;border-radius:12px}
+    .contact .info{flex:1;color:#fff}
+    .contact a{color:#00ffcc}
+    .footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* New form input design */
+    form.card input, form.card textarea{
+      width:100%;
+      background:#052244;
+      border:1px solid rgba(255,255,255,0.1);
+      border-radius:10px;
+      color:#eaf3ff;
+      padding:10px 12px;
+      margin-top:4px;
+      font-size:14px;
+      outline:none;
+      transition:all .3s;
+    }
+    form.card input:focus, form.card textarea:focus{
+      border-color:var(--accent);
+      box-shadow:0 0 8px rgba(0,208,196,0.4);
+    }
+    form.card button.btn{
+      margin-top:10px;width:100%;text-align:center;
+    }
+
+    @media (max-width:900px){.hero{grid-template-columns:1fr;} .hero-left{height:260px} .grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">AP</div>
+        <div>
+          <div style="font-weight:800">ArulPandi Arumugam</div>
+          <div style="font-size:13px;color:var(--muted)">Senior process Executive | Cloud Support & Healthcare RCM</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#about">About</a>
+        <a href="#certifications">Certifications</a>
+        <a class="cta" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-left">
+          <!-- ✅ Profile photo added -->
+          <img src="WhatsApp Image 2025-11-04 at 11.48.19 AM.jpeg" alt="Arul Pandi profile photo" class="profile-pic">
+        </div>
+        <div class="hero-right">
+          <h1 class="name">Hi I'm, ArulPandi Arumugam</h1>
+          <div class="title-marquee"><span>AWS Cloud Practitioner & Healthcare RCM Specialist</span></div>
+          <p class="summary">I am a BBA graduate with 2.4 years of experience in Healthcare Revenue Cycle Management, 
+            specializing in payment posting, denial management and improving claim accuracy. 
+            I maintain compliance, reduce rework, and support faster reimbursement outcomes with data-based decision making and process clarity. 
+            Along with this, I hold practical working knowledge of AWS Cloud services such as EC2, S3, IAM, VPC and RDS, enabling me to assist in cloud configuration, deployments and support tasks. 
+            I focus on delivering reliable operational results while continuously strengthening my cloud, automation and technical skills to grow in roles that bridge healthcare domain experience with cloud based technologies.</p>
+          <div class="cta-row">
+            <a class="btn" href="mailto:arul23pandi@gmail.com">Contact</a>
+            <a class="btn outline" href="#projects">View Projects</a>
+            <a class="btn outline" href="Arulpandi Resume MB.pdf" download>Download Resume (Healthcare)</a>
+            <a class="btn outline" href="Aws resume.pdf" download>Download Resume (Cloud)</a>
+       </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2>Technical & Professional Skills</h2>
+        <div class="grid">
+          <div class="card">
+            <div><strong>Payment Posting (ERA/EOB handling)</strong></div>
+            <div class="progress-bar"><div class="progress-fill" style="--w:95%"></div></div>
+            <div style="margin-top:10px"><strong>Denial Management (CARC/RARC analysis)</strong></div>
+            <div class="progress-bar"><div class="progress-fill" style="--w:90%"></div></div>
+            <div><strong>Typing accuracy</strong></div>
+            <div class="progress-bar"><div class="progress-fill" style="--w:97%"></div></div>
+          </div>
+          <div class="card">
+            <div><strong>AWS (EC2, S3, Lambda, RDS)</strong></div>
+            <div class="progress-bar"><div class="progress-fill" style="--w:80%"></div></div>
+            <div style="margin-top:10px"><strong>Billing (Budget / Cost Explorer)</strong></div>
+            <div class="progress-bar"><div class="progress-fill" style="--w:80%"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="card project">
+          <img src="https://images.unsplash.com/photo-1508830524289-0adcbe822b40?auto=format&fit=crop&w=800&q=60" alt="AWS EC2 Project">
+          <div class="meta">
+            <strong>Scalable Web App on AWS EC2</strong>
+            <div class="muted">2-tier web app using EC2, RDS, ALB, Auto Scaling, and CloudWatch.</div>
+            <p style="margin:6px 0;color:var(--muted)">Created VPC, EC2, RDS, load balancing, and monitoring setup.</p>
+            <div style="margin-top:6px"><a class="btn outline" href="https://github.com/cloudwitharul/aws-ec2-project" target="_blank">View on GitHub</a></div>
+          </div>
+        </div>
+        <div style="height:12px"></div>
+        <div class="card project">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=60" alt="S3 static site">
+          <div class="meta">
+            <strong>Static Website Hosting on S3</strong>
+            <div class="muted">Static site hosting using Amazon S3.</div>
+            <p style="margin:6px 0;color:var(--muted)">Configured S3 for static hosting, policies, and Route53 integration.</p>
+            <div style="margin-top:6px"><a class="btn outline" href="https://github.com/cloudwitharul/aws-s3-static-site" target="_blank">View on GitHub</a></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <div class="card">
+          <strong>Bachelor of Business Administration (BBA)</strong>
+          <p class="muted">Pavendar Bharathidasan College of Arts and Science, Trichy — 2016–2019</p>
+          <p style="color:#fff">Graduated with <strong>79%</strong>, building strong foundations in business management and organizational operations.</p>
+        </div>
+      </section>
+
+      <section id="about">
+        <h2>About</h2>
+        <div class="card">Healthcare RCM Summary
+          <strong></strong>
+          <p class="muted"> 
+
+              Highly detail-oriented Healthcare RCM professional with strong expertise in Payment Posting, 
+              Denial Management, and End-to-End Revenue Cycle Operations. 
+              Experienced in analyzing claim outcomes, resolving CO/PR/OA denials, 
+              and improving reimbursement accuracy while ensuring HIPAA compliance. 
+              Known for maintaining high quality scores, reducing rework, and supporting faster claim turnaround with process clarity and data-driven decision making. 
+              Committed to operational excellence and delivering measurable financial impact within RCM environments.
+          
+        <div class="card">AWS / Cloud Summary
+          <strong></strong>
+          <p class="muted"> 
+              AWS Cloud Practitioner skilled in designing, deploying, and supporting foundational cloud architectures using core AWS services including EC2, S3, IAM, RDS and VPC. 
+              Experienced in hosting applications, static websites, configuring secure access controls, and applying cloud monitoring practices with CloudWatch & CloudTrail. 
+              Strong understanding of cloud best practices, networking fundamentals, automation mindset, and continuous learning approach. 
+              Seeking opportunities to apply cloud expertise in scalable IT environments, Cloud Support roles, and cloud implementation projects.</p>
+          <p style="color:#fff"> <strong></strong>  </p>
+        </div>
+      </section>
+
+      <!-- CERTIFICATIONS SECTION -->
+<section id="certifications">
+  <h2>Certifications</h2>
+  <div class="grid">
+    <div class="card">
+      <strong>AWS Certified Cloud Practitioner</strong>
+      <p class="muted">Amazon Web Services (Credly verified)</p>
+      <a class="btn outline" href="https://www.credly.com/badges/d2c5eee7-3140-440e-98a0-9975fa2f8ffc/public_url" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="card">
+      <strong>Digital Marketing Certification</strong>
+      <p class="muted">Google Digital Garage</p>
+      <a class="btn outline" href="Digital marketing certicate.pdf" download>Download Certificate (PDF)</a>
+    </div>
+
+    <div class="card">
+      <strong>Basic Python Programming</strong>
+      <p class="muted">Guvi (IITM Research Park)</p>
+      <a class="btn outline" href="Python Certificate.pdf" download>Download Certificate (PDF)</a>
+    </div>
+
+    <div class="card">
+      <strong>AWS re/Start Graduate Certification</strong>
+      <p class="muted">AWS Cloud Foundation Program</p>
+      <a class="btn outline" href="https://www.credly.com/badges/5f6ff5cb-71af-48c9-a78d-49c3a90107fd/public_url" target="_blank">View Certificate</a>
+    </div>
+  </div>
+
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact">
+          <div class="info card">
+            <div style="font-weight:700;color:var(--highlight)">Get in touch</div>
+            <div style="margin-top:8px;color:#fff">Email: <a href="mailto:arul23pandi@gmail.com">arul23pandi@gmail.com</a></div>
+            <div style="margin-top:6px;color:#fff">Phone: +91 97880 25060</div>
+            <div style="margin-top:6px;color:#fff">LinkedIn: <a href="https://www.linkedin.com/in/arul-pandi" target="_blank">/in/arul-pandi</a></div>
+            <div style="margin-top:6px;color:#fff">GitHub: <a href="https://github.com/cloudwitharul" target="_blank">cloudwitharul</a></div>
+          </div>
+
+          <form class="card" action="mailto:arul23pandi@gmail.com" method="post" enctype="text/plain">
+            <label class="muted">Name</label>
+            <input name="name" placeholder="Your full name" required />
+            <label class="muted" style="margin-top:8px">What's on your mind...</label>
+            <textarea name="message" rows="5" placeholder="How can I help you?" required></textarea>
+            <button class="btn" type="submit">Send Message</button>
+          </form>
+        </div>
+      </section>
+
+      <div class="footer">© 2025 ArulPandi Arumugam — Built with care • Design inspired by modern product landing pages</div>
+    </main>
+  </div>
+</body>
+</html>
